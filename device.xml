@@ -4,8 +4,8 @@
   <!-- Oneplus -->
   <!-- Common repos -->
   <project name="Cyanogenmod/android_device_oppo_common" path="device/oppo/common" remote="cm" branch="cm-13.0" />
-  <!-- <project name="TheMuppets/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" revision="cm-13.0" /> 
-  -->
+  <project name="TheMuppets/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" revision="cm-13.0" /> 
+
   <!-- Oneplus 2 -->
   <project name="AOKP/device_oneplus_oneplus2" path="device/oneplus/oneplus2" remote="aokp" branch="mm" />
   <project name="Cyanogenmod/android_kernel_oneplus_msm8994" path="kernel/oneplus/msm8994" remote="cm" branch="cm-13.0" />
