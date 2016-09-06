@@ -1,16 +1,16 @@
---- device/oneplus/oneplus2/device.mk.bak	2016-09-05 13:18:46.553343826 +1000
-+++ device/oneplus/oneplus2/device.mk	2016-09-05 13:19:37.814111348 +1000
+--- device/oneplus/oneplus2/device.mk.orig	2016-09-06 12:44:59.458268223 +1000
++++ device/oneplus/oneplus2/device.mk	2016-09-06 12:43:03.055774141 +1000
 @@ -284,7 +284,13 @@
      p2p_supplicant_overlay.conf \
      hostapd_default.conf \
      hostapd.accept \
--    hostapd.deny
+-    hostapd.deny 
 +    hostapd.deny \
 +	GmsCore \
 +	FakeStore \
-+	UnifiedNlp \
 +	LocalGSM \
 +	IchnaeaLnp \
++	FDroid \
 +	YahooWeatherProvider
  
  # Inherit from oppo-common
