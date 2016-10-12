@@ -4,13 +4,13 @@
   <!-- MICROG -->
   <project path="packages/apps/GmsCore" name="microg/android_packages_apps_GmsCore" remote="github" revision="master" />
   <project path="packages/apps/FakeStore" name="microg/android_packages_apps_FakeStore" remote="github" revision="master" />
+  <prokect path="packages/apps/GfsProxy" name="microg/android_packages_apps_GsfProxy" remote="github" revision="master" />
   <!-- need android.mk files -->
+  <!--
   <project path="packages/apps/LocalGSMBackend" name="n76/Local-GSM-Backend" remote="github" revision="master" />
   <project path="packages/apps/NominatemBackend" name="microg/NominatimGeocoderBackend" remote="github" revision="master" />
   <project path="packages/apps/IchnaeaLnpBackend" name="microg/IchnaeaNlpBackend" remote="github" revision="master" />
   <project path="packages/apps/unifiedNlpBackend" name="openbmap/openbmap-unifiedNlpProvider" remote="github" revision="master" />
-  <!-- 
-  <project path="packages/apps/GfsProxy" name="microg/android_packages_apps_GsfProxy" remote="github" revision="master" />
   -->
-  <project path="packages/apps/FDroid" name="fdroid/fdroidclient" remote="gitlab" revision="stable-v0.100" />
+  <project path="packages/apps/FDroid" name="fdroid/fdroidclient" remote="gitlab" revision="stable-v0.101" />
 </manifest>

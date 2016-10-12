@@ -1,0 +1,11 @@
+--- device/oneplus/oneplus2/device.mk	2016-10-11 13:17:49.677383472 +1100
++++ device/oneplus/oneplus2/device.mk	2016-10-11 13:36:28.533586460 +1100
+@@ -247,7 +247,7 @@
+     sensors.ssc.wrapper
+ 
+ PRODUCT_COPY_FILES += \
+-    $(LOCAL_PATH)/sensors/hals.conf:system/etc/sensors/hals.conf
++    $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf
+ 
+ # USB
+ PRODUCT_PACKAGES += \

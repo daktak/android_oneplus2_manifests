@@ -1,0 +1,13 @@
+--- vendor/cmsdk/tests/src/org/cyanogenmod/tests/externalviews/keyguardexternalviews/KeyguardExternalProviderTest.java	2016-10-11 13:31:24.409585649 +1100
++++ vendor/cmsdk/tests/src/org/cyanogenmod/tests/externalviews/keyguardexternalviews/KeyguardExternalProviderTest.java.mod	2016-10-11 19:29:42.669276962 +1100
+@@ -196,8 +196,8 @@
+                 assertEquals (decorView.getChildAt(1), getService().getProvider().getView());
+ 
+                 WindowManager.LayoutParams param = params.getAllValues().get(0);
+-                assertEquals ((param.type & WindowManager.LayoutParams.TYPE_KEYGUARD_PANEL),
+-                        WindowManager.LayoutParams.TYPE_KEYGUARD_PANEL);
++                assertEquals ((param.type & WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG),
++                        WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
+ 
+                 int flags = WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL |
+                         WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS |

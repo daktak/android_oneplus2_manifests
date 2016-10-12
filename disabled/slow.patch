@@ -1,0 +1,31 @@
+diff --git vendor/cmsdk/Android.mk vendor/cmsdk/Android.mk
+index c95d09c..d800fbe 100644
+--- vendor/cmsdk/Android.mk
++++ vendor/cmsdk/Android.mk
+@@ -102,7 +102,7 @@ include $(CLEAR_VARS)
+ 
+ LOCAL_MODULE:= org.cyanogenmod.platform.sdk
+ LOCAL_MODULE_TAGS := optional
+-LOCAL_REQUIRED_MODULES := services
++LOCAL_REQUIRED_MODULES := org.cyanogenmod.platform-res services
+ 
+ LOCAL_SRC_FILES := \
+     $(call all-java-files-under, $(cyanogenmod_src)) \
+@@ -112,12 +112,12 @@ LOCAL_SRC_FILES := \
+ # Included aidl files from cyanogenmod.app namespace
+ LOCAL_AIDL_INCLUDES := $(LOCAL_PATH)/src/java
+ 
+-cmsdk_LOCAL_INTERMEDIATE_SOURCES := \
+-    $(cm_platform_res)/cyanogenmod/platform/R.java \
+-    $(cm_platform_res)/cyanogenmod/platform/Manifest.java
++#cmsdk_LOCAL_INTERMEDIATE_SOURCES := \
++#    $(cm_platform_res)/cyanogenmod/platform/R.java \
++#    $(cm_platform_res)/cyanogenmod/platform/Manifest.java
+ 
+-LOCAL_INTERMEDIATE_SOURCES := \
+-    $(cmsdk_LOCAL_INTERMEDIATE_SOURCES)
++#LOCAL_INTERMEDIATE_SOURCES := \
++#    $(cmsdk_LOCAL_INTERMEDIATE_SOURCES)
+ 
+ $(full_target): $(cm_framework_built) $(gen)
+ include $(BUILD_STATIC_JAVA_LIBRARY)
