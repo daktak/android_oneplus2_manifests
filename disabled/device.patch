@@ -1,0 +1,12 @@
+--- vendor/oneplus/oneplus2/oneplus2-vendor.mk	2016-10-11 13:31:25.382071696 +1100
++++ vendor/oneplus/oneplus2/oneplus2-vendor.mk.new	2016-10-12 16:05:56.644590648 +1100
+@@ -515,3 +515,8 @@
+     imssettings \
+     qcnvitems \
+-    qcrilhook
++    qcrilhook \
++    GmsCore \
++    FakeStore \
++    GfsProxy \
++    FDroid
++

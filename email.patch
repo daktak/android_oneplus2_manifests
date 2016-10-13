@@ -1,6 +1,6 @@
---- build/target/product/core.mk	2016-08-24 15:44:25.586506790 +1000
-+++ build/target/product/core.mk	2016-08-24 16:38:38.662844763 +1000
-@@ -31,7 +31,6 @@
+--- build/target/product/core.mk	2016-10-13 11:22:28.846818542 +1100
++++ build/target/product/core.mk.new	2016-10-13 11:22:58.920848572 +1100
+@@ -33,7 +32,6 @@
      DeskClock \
      DocumentsUI \
      DownloadProviderUi \

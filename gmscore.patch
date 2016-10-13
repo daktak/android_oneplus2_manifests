@@ -1,0 +1,10 @@
+--- packages/apps/GmsCore/Android.mk	2016-10-12 15:08:07.958946074 +1100
++++ packages/apps/GmsCore/Android.mk.new	2016-10-13 10:00:13.602471801 +1100
+@@ -14,6 +14,7 @@
+ 
+ LOCAL_PATH:= $(call my-dir)
+ include $(CLEAR_VARS)
++LOCAL_PRIVILEGED_MODULE := true
+ 
+ LOCAL_MODULE := GmsCore
+ LOCAL_MODULE_TAGS := optional
