@@ -14,5 +14,5 @@
    <project path="packages/apps/FDroid" name="fdroid/fdroidclient" remote="gitlab" revision="stable-v0.101" />
    -->
   <remove-project name="CyanogenMod/android_packages_apps_Calendar" />
-  <project path="packages/apps/Etar" name="xsoh/Etar-Calendar" remote="github" revision="master" />
+  <project path="packages/apps/Calendar" name="xsoh/Etar-Calendar" remote="github" revision="master" />
 </manifest>

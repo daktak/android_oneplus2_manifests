@@ -1,6 +1,6 @@
---- device/oneplus/oneplus2/device.mk	2016-10-12 12:56:08.776560225 +1100
-+++ device/oneplus/oneplus2/device.mk.new	2016-10-13 10:01:55.614457050 +1100
-@@ -269,7 +269,9 @@
+--- device/oneplus/oneplus2/device.mk	2016-10-13 11:22:28.834812542 +1100
++++ device/oneplus/oneplus2/device.mk.nev	2016-10-14 10:10:19.976131974 +1100
+@@ -269,7 +269,8 @@
      hostapd \
      libwpa_client \
      wpa_supplicant \

@@ -1,5 +1,5 @@
---- packages/apps/Etar/Android.mk.old	2016-10-13 13:01:26.667349791 +1100
-+++ packages/apps/Etar/Android.mk	2016-10-13 13:04:08.099028139 +1100
+--- packages/apps/Calendar/Android.mk	2016-10-13 22:31:00.219742042 +1100
++++ packages/apps/Calendar/Android.mk.etar	2016-10-14 10:28:52.677482263 +1100
 @@ -1,50 +1,41 @@
 +# Copyright (c) 2015 μg Project Team
 +#
@@ -17,6 +17,7 @@
 +
  LOCAL_PATH:= $(call my-dir)
  include $(CLEAR_VARS)
++LOCAL_PRIVILEGED_MODULE := true
  
 -# Include res dir from chips
 -chips_dir := ../../../frameworks/ex/chips/res
@@ -63,21 +64,21 @@
 -LOCAL_AAPT_FLAGS += --extra-packages com.android.timezonepicker
 -
 -include $(BUILD_PACKAGE)
-+calendar_root  := $(LOCAL_PATH)
-+calendar_out   := $(OUT_DIR)/target/common/obj/APPS/$(LOCAL_MODULE)_intermediates
-+calendar_build := $(calendar_root)/build
-+calendar_apk   := build/outputs/apk/Etar-release-unsigned.apk
++etar_root  := $(LOCAL_PATH)
++etar_out   := $(OUT_DIR)/target/common/obj/APPS/$(LOCAL_MODULE)_intermediates
++etar_build := $(etar_root)/build
++etar_apk   := build/outputs/apk/Calendar-release-unsigned.apk
 +
-+$(calendar_root)/$(calendar_apk):
-+	rm -Rf $(calendar_build)
-+	mkdir -p $(calendar_out)
-+	ln -s $(calendar_out) $(calendar_build)
-+	echo "sdk.dir=$(ANDROID_HOME)" > $(calendar_root)/local.properties
-+	cd $(calendar_root) && git submodule update --recursive --init
-+	cd $(calendar_root)/$(calendar_dir) && JAVA_TOOL_OPTIONS="$(JAVA_TOOL_OPTIONS) -Dfile.encoding=UTF8" sh /opt/android-studio/gradle/gradle-2.14.1/bin/gradle assembleRelease
++$(etar_root)/$(etar_apk):
++	rm -Rf $(etar_build)
++	mkdir -p $(etar_out)
++	ln -s $(etar_out) $(etar_build)
++	echo "sdk.dir=$(ANDROID_HOME)" > $(etar_root)/local.properties
++	cd $(etar_root) && git submodule update --recursive --init
++	cd $(etar_root) && JAVA_TOOL_OPTIONS="$(JAVA_TOOL_OPTIONS) -Dfile.encoding=UTF8" sh /opt/android-studio/gradle/gradle-2.14.1/bin/gradle assembleRelease
 +
 +LOCAL_CERTIFICATE := platform
-+LOCAL_SRC_FILES := $(calendar_apk)
++LOCAL_SRC_FILES := $(etar_apk)
 +LOCAL_MODULE_CLASS := APPS
 +LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
  

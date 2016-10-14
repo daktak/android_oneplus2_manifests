@@ -11,8 +11,8 @@ breakfast oneplus2
 croot
 #make org.cyanogenmod.platform -j1
 #mka org.cyanogenmod.platform-res -j1
-cd vendors/cmsdk
-mma -j1
-cd ../..
+#cd vendors/cmsdk
+#mma -j1
+#cd ../..
 #mka -j1
 brunch oneplus2
