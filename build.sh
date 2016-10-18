@@ -4,8 +4,8 @@
 export PATH=/home/daktak/.gentoo/java-config-2/current-user-vm/bin:$PATH
 #. build/envsetup.sh
 export USE_CCACHE=1
-prebuilts/misc/linux-x86/ccache/ccache -M 2G
-export ANDROID_CCACHE_SIZE="2G"
+prebuilts/misc/linux-x86/ccache/ccache -M 20G
+export ANDROID_CCACHE_SIZE="20G"
 export ANDROID_CCACHE_DIR="/pub/aosp/android/.ccache"
 breakfast oneplus2
 croot
