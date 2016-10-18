@@ -1,12 +1,12 @@
---- vendor/oneplus/oneplus2/oneplus2-vendor.mk	2016-10-11 13:31:25.382071696 +1100
-+++ vendor/oneplus/oneplus2/oneplus2-vendor.mk.new	2016-10-12 16:05:56.644590648 +1100
-@@ -515,3 +515,8 @@
-     imssettings \
-     qcnvitems \
--    qcrilhook
-+    qcrilhook \
-+    GmsCore \
-+    FakeStore \
-+    GfsProxy \
-+    FDroid
-+
+--- device/oneplus/oneplus2/device.mk	2016-10-13 11:22:28.834812542 +1100
++++ device/oneplus/oneplus2/device.mk.nev	2016-10-14 10:10:19.976131974 +1100
+@@ -269,7 +269,8 @@
+     hostapd \
+     libwpa_client \
+     wpa_supplicant \
+-    wpa_supplicant.conf
++    wpa_supplicant.conf \
++    GmsCore
+ 
+ PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \

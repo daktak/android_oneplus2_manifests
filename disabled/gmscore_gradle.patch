@@ -1,0 +1,5 @@
+--- packages/apps/GmsCore/gradle.properties	2016-10-16 19:05:24.727716743 +1100
++++ packages/apps/GmsCore/gradle.properties.new	2016-10-16 19:28:10.497775462 +1100
+@@ -1 +1,2 @@
+ android.useDeprecatedNdk=true
++android.builder.sdkDownload=false
