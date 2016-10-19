@@ -8,6 +8,6 @@ rm frameworks/base/core/res/res/values/*.orig
 .repo/local_manifests/build.sh
 #endday=`date +%Y%m%d`
 
-#filename="/out/target/product/oneplus2/cm-14.0-${startday}-UNOFFICIAL-oneplus2.zip"
-#mv "${filename}" ~/cm-14.0-${startday}-microg-oneplus2.zip"
+filename=out/target/product/oneplus2/cm-14.0-${startday}-UNOFFICIAL-oneplus2.zip
+mv ${filename} ~/cm-14.0-${startday}-microg-oneplus2.zip
 
