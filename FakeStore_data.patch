@@ -1,0 +1,9 @@
+--- packages/apps/FakeStore/Android.mk	2016-10-19 10:25:58.563393597 +1100
++++ packages/apps/FakeStore/Android.mk.new	2016-10-19 14:11:21.111216091 +1100
+@@ -37,5 +37,6 @@
+ LOCAL_SRC_FILES := $(fakestore_dir)/$(fakestore_apk)
+ LOCAL_MODULE_CLASS := APPS
+ LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
++LOCAL_MODULE_PATH := $(TARGET_OUT_DATA)/app
+ 
+ include $(BUILD_PREBUILT)

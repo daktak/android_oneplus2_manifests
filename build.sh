@@ -7,11 +7,15 @@ export USE_CCACHE=1
 prebuilts/misc/linux-x86/ccache/ccache -M 20G
 export ANDROID_CCACHE_SIZE="20G"
 export ANDROID_CCACHE_DIR="/pub/aosp/android/.ccache"
-breakfast oneplus2
+#breakfast oneplus2
 croot
-#make org.cyanogenmod.platform -j1
-mka org.cyanogenmod.platform-res -j1
-#cd vendors/cmsdk
+#mka framework-res -j2
+#mka org.cyanogenmod.platform -j2
+#mka org.cyanogenmod.platform-res -j2
+#mkdir /pub/aosp/out/target/common/obj/APPS/GmsCore_intermediates -p
+#mkdir /pub/aosp/out/target/common/obj/APPS/FakeStore_intermediates -p
+#mkdir /pub/aosp/out/target/common/obj/APPS/GfsProxy_intermediates -p
+#cd vendor/cmsdk
 #mma -j1
 #cd ../..
 #mka -j1
