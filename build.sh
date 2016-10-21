@@ -12,10 +12,6 @@ croot
 #mka framework-res -j2
 #mka org.cyanogenmod.platform -j2
 #mka org.cyanogenmod.platform-res -j2
-mka FakeStore
-mka GsfProxy
-mka F-Droid
-mka GmsCore
 #cd vendor/cmsdk
 #mma -j1
 #cd ../..

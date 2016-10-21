@@ -7,8 +7,9 @@
 -    wpa_supplicant.conf
 +    wpa_supplicant.conf \
 +    GmsCore \
-+    GfsProxy \
-+    FakeStore
++    GsfProxy \
++    FakeStore \
++    F-Droid
  
  PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
