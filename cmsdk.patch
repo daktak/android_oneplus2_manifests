@@ -1,0 +1,11 @@
+--- vendor/cmsdk/Android.mk	2016-10-20 21:16:07.012978150 +1100
++++ vendor/cmsdk/Android.mk.new	2016-10-21 13:26:39.205906616 +1100
+@@ -113,7 +113,7 @@
+ 
+ LOCAL_MODULE:= org.cyanogenmod.platform.sdk
+ LOCAL_MODULE_TAGS := optional
+-LOCAL_REQUIRED_MODULES := services
++LOCAL_REQUIRED_MODULES := org.cyanogenmod.platform-res services
+ 
+ LOCAL_SRC_FILES := \
+     $(call all-java-files-under, $(cyanogenmod_sdk_src)) \
