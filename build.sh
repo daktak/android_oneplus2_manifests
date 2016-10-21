@@ -11,9 +11,12 @@ breakfast oneplus2
 croot
 #mka framework-res -j2
 #mka org.cyanogenmod.platform -j2
-#mka org.cyanogenmod.platform-res -j2
+mka org.cyanogenmod.platform-res -j2
 #cd vendor/cmsdk
 #mma -j1
 #cd ../..
 #mka -j1
+mka GmsCore
+mka GsfProxy
+mka FakeStore
 brunch oneplus2
