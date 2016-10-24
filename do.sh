@@ -1,9 +1,12 @@
 #!/bin/bash
 make clobber
-mkdir /pub/aosp/out/target/common/obj/APPS/GmsCore_intermediates -p
-mkdir /pub/aosp/out/target/common/obj/APPS/FakeStore_intermediates -p
-mkdir /pub/aosp/out/target/common/obj/APPS/GsfProxy_intermediates -p
-mkdir /pub/aosp/out/target/common/obj/APPS/F-Droid_intermediates -p
+for n in `grep + .repo/local_manifests/device.patch | grep -v ++ | grep -v PRODUCT | grep -v @@ | grep -v device.mk | grep -v wpa | awk '{print $2}'`; do
+mkdir /pub/aosp/out/target/common/obj/APPS/$n_intermediates -p; done
+#
+#mkdir /pub/aosp/out/target/common/obj/APPS/GmsCore_intermediates -p
+#mkdir /pub/aosp/out/target/common/obj/APPS/FakeStore_intermediates -p
+#mkdir /pub/aosp/out/target/common/obj/APPS/GsfProxy_intermediates -p
+#mkdir /pub/aosp/out/target/common/obj/APPS/F-Droid_intermediates -p
 
 
 curl --create-dirs -L -o .repo/local_manifests/roomservice.xml -O -L https://raw.githubusercontent.com/Seraph08/oneplus2_manifests/master/cm-14.0.xml
@@ -13,6 +16,7 @@ repo sync --force-sync
 #repo sync --force-broken --force-sync --no-clone-bundle --quiet
 .repo/local_manifests/patch.sh
 rm frameworks/base/core/res/res/values/*.orig
+rm device/oneplus/oneplus2/*.orig
 .repo/local_manifests/build.sh
 
 filename=out/target/product/oneplus2/cm-14.0-${startday}-UNOFFICIAL-oneplus2.zip

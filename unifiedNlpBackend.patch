@@ -1,7 +1,7 @@
 diff -uNar packages/apps/unifiedNlpBackend/Android.mk packages/apps/unifiedNlpBackend/Android.mk
 --- packages/apps/unifiedNlpBackend/Android.mk	1970-01-01 10:00:00.000000000 +1000
-+++ packages/apps/unifiedNlpBackend/Android.mk	2016-09-05 13:08:56.005042483 +1000
-@@ -0,0 +1,27 @@
++++ packages/apps/unifiedNlpBackend/Android.mk	2016-10-24 14:40:24.798051973 +1100
+@@ -0,0 +1,26 @@
 +LOCAL_PATH:= $(call my-dir)
 +
 +include $(CLEAR_VARS)
@@ -11,21 +11,20 @@ diff -uNar packages/apps/unifiedNlpBackend/Android.mk packages/apps/unifiedNlpBa
 +LOCAL_PACKAGE_NAME := unifiedNlp
 +
 +unifiednlp_root  := $(LOCAL_PATH)
-+unifiednlp_dir   := app
 +unifiednlp_out   := $(OUT_DIR)/target/common/obj/APPS/$(LOCAL_MODULE)_intermediates
-+unifiednlp_build := $(unifiednlp_root)/$(unifiednlp_dir)/build
-+unifiednlp_apk   := build/outputs/apk/$(unifiednlp_dir)-release-unsigned.apk
-+
-+$(unifiednlp_root)/$(unifiednlp_dir)/$(unifiednlp_apk):
++unifiednlp_build := $(unifiednlp_root)/build
++unifiednlp_apk   := build/outputs/apk/unifiedNlpBackend-release-unsigned.apk
++$(unifiednlp_root)/$(unifiednlp_apk):
 +	rm -Rf $(unifiednlp_build)
 +	mkdir -p $(unifiednlp_out)
 +	mkdir -p $(unifiednlp_build)
 +	ln -sf $(unifiednlp_out) $(unifiednlp_build)
-+	cd $(unifiednlp_root) && JAVA_TOOL_OPTIONS="$(JAVA_TOOL_OPTIONS) -Dfile.encoding=UTF8" ./gradlew assembleRelease
++	cd $(unifiednlp_root) && JAVA_TOOL_OPTIONS="$(JAVA_TOOL_OPTIONS) -Dfile.encoding=UTF8" gradle assembleRelease
 +
 +LOCAL_CERTIFICATE := platform
-+LOCAL_SRC_FILES := $(unifiednlp_dir)/$(unifiednlp_apk)
++LOCAL_SRC_FILES := $(unifiednlp_apk)
 +LOCAL_MODULE_CLASS := APPS
 +LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
++LOCAL_MODULE_PATH := $(TARGET_OUT_DATA)/app
 +
 +include $(BUILD_PREBUILT)
