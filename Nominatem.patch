@@ -20,7 +20,7 @@ diff -uar -N packages/apps/NominatemBackend/Android.mk packages/apps/NominatemBa
 +	mkdir -p $(unifiednlp_out)
 +	mkdir -p $(unifiednlp_build)
 +	ln -sf $(unifiednlp_out) $(unifiednlp_build)
-+	cd $(unifiednlp_root) && JAVA_TOOL_OPTIONS="$(JAVA_TOOL_OPTIONS) -Dfile.encoding=UTF8" ./gradlew assembleRelease
++	cd $(unifiednlp_root) && JAVA_TOOL_OPTIONS="$(JAVA_TOOL_OPTIONS) -Dfile.encoding=UTF8" gradle assembleRelease
 +
 +LOCAL_CERTIFICATE := platform
 +LOCAL_SRC_FILES := $(unifiednlp_apk)
