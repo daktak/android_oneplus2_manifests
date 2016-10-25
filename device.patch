@@ -1,6 +1,6 @@
---- device/oneplus/oneplus2/device.mk	2016-10-24 14:47:49.260732728 +1100
-+++ device/oneplus/oneplus2/device.mk.new	2016-10-24 14:47:38.694018175 +1100
-@@ -267,7 +267,15 @@
+--- device/oneplus/oneplus2/device.mk.old	2016-10-25 13:54:32.551184286 +1100
++++ device/oneplus/oneplus2/device.mk	2016-10-25 13:54:55.157482919 +1100
+@@ -265,7 +265,16 @@
      hostapd \
      libwpa_client \
      wpa_supplicant \
@@ -13,7 +13,8 @@
 +    IchnaeaLnp \
 +    unifiedNlp \
 +    GSMBackend \
-+    Nominatem
++    Nominatem \
++    afhDownloader
  
  PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \

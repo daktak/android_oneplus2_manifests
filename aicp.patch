@@ -1,0 +1,13 @@
+--- device/oneplus/oneplus2/cm.dependencies	2016-10-25 22:17:20.019339405 +1100
++++ device/oneplus/oneplus2/cm.dependencies.aicp	2016-10-25 22:17:09.008438676 +1100
+@@ -19,8 +19,8 @@
+   },
+   {
+     "remote": "github",
+-    "repository": "Seraph08/proprietary_vendor_oneplus",
++    "repository": "AICP/proprietary_vendor_oneplus",
+     "target_path": "vendor/oneplus",
+-    "revision": "cm-14.0"
++    "revision": "n7.0"
+   }
+ ]

@@ -13,6 +13,7 @@
   <!-- more -->
   <project path="packages/apps/FDroid" name="fdroid/fdroidclient" remote="gitlab" revision="master" />
   <project path="packages/apps/afh_downloader" name="daktak/afh_downloader" remote="github" revision="master" />
+  <!-- cleanup unused -->
   <remove-project name="CyanogenMod/android_packages_apps_Calendar" />
   <remove-project name="CyanogenMod/android_packages_apps_TV" />
   <remove-project name="CyanogenMod/android_packages_apps_Nfc" />
