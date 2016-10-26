@@ -1,0 +1,97 @@
+diff -uNar kernel/oneplus/msm8994/drivers/video/msm/mdss/lcd_notify.c kernel/oneplus/msm8994/drivers/video/msm/mdss/lcd_notify.c
+--- kernel/oneplus/msm8994/drivers/video/msm/mdss/lcd_notify.c	1970-01-01 10:00:00.000000000 +1000
++++ kernel/oneplus/msm8994/drivers/video/msm/mdss/lcd_notify.c	2016-10-26 14:59:22.926195899 +1100
+@@ -0,0 +1,52 @@
++/*
++ * drivers/video/msm/mdss/lcd_notify.c
++ *
++ * Copyright (C) 2013 LGE Inc
++ *
++ * This software is licensed under the terms of the GNU General Public
++ * License version 2, as published by the Free Software Foundation, and
++ * may be copied, distributed, and modified under those terms.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ */
++
++#include <linux/lcd_notify.h>
++#include <linux/notifier.h>
++#include <linux/export.h>
++
++static BLOCKING_NOTIFIER_HEAD(lcd_notifier_list);
++
++/**
++ *	lcd_register_client - register a client notifier
++ *	@nb: notifier block to callback on events
++ */
++int lcd_register_client(struct notifier_block *nb)
++{
++	return blocking_notifier_chain_register(&lcd_notifier_list, nb);
++}
++EXPORT_SYMBOL(lcd_register_client);
++
++/**
++ *	lcd_unregister_client - unregister a client notifier
++ *	@nb: notifier block to callback on events
++ */
++int lcd_unregister_client(struct notifier_block *nb)
++{
++	return blocking_notifier_chain_unregister(&lcd_notifier_list, nb);
++}
++EXPORT_SYMBOL(lcd_unregister_client);
++
++/**
++ *	lcd_notifier_call_chain - notify clients on lcd_events
++ *	@val: Value passed unmodified to notifier function
++ *	@v: pointer passed unmodified to notifier function
++ *
++ */
++int lcd_notifier_call_chain(unsigned long val, void *v)
++{
++	return blocking_notifier_call_chain(&lcd_notifier_list, val, v);
++}
++EXPORT_SYMBOL_GPL(lcd_notifier_call_chain);
+diff -uNar kernel/oneplus/msm8994/include/linux/lcd_notify.h kernel/oneplus/msm8994/include/linux/lcd_notify.h
+--- kernel/oneplus/msm8994/include/linux/lcd_notify.h	1970-01-01 10:00:00.000000000 +1000
++++ kernel/oneplus/msm8994/include/linux/lcd_notify.h	2016-10-26 14:59:13.161195437 +1100
+@@ -0,0 +1,37 @@
++#ifndef __LINUX_LCD_NOTIFY_H
++#define __LINUX_LCD_NOTIFY_H
++
++#include <linux/notifier.h>
++
++/* the display on process started */
++#define LCD_EVENT_ON_START		0x01
++/* the display on process end */
++#define LCD_EVENT_ON_END		0x02
++/* the display off process started */
++#define LCD_EVENT_OFF_START		0x03
++/* the display off process end */
++#define LCD_EVENT_OFF_END		0x04
++
++struct lcd_event {
++	void *data;
++};
++
++#ifdef CONFIG_FB_MSM_MDSS
++int lcd_register_client(struct notifier_block *nb);
++int lcd_unregister_client(struct notifier_block *nb);
++int lcd_notifier_call_chain(unsigned long val, void *v);
++#else
++static int inline lcd_register_client(struct notifier_block *nb)
++{
++	return -ENOENT;
++}
++static int inline lcd_unregister_client(struct notifier_block *nb)
++{
++	return -ENOENT;
++}
++static int inline lcd_notifier_call_chain(unsigned long val, void *v)
++{
++	return -ENOENT;
++}
++#endif
++#endif /* _LINUX_LCD_NOTIFY_H */
