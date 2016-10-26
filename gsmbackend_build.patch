@@ -1,0 +1,11 @@
+--- packages/apps/LocalGSMBackend/app/build.gradle	2016-10-26 15:48:02.761333985 +1100
++++ packages/apps/LocalGSMBackend/app/build.gradle	2016-10-26 15:47:00.955331062 +1100
+@@ -4,7 +4,7 @@
+     }
+     dependencies {
+         // replace with the current version of the Android plugin
+-        classpath 'com.android.tools.build:gradle:2.2.2'
++        // classpath 'com.android.tools.build:gradle:2.2.2'
+         // replace with the current version of the android-apt plugin
+         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+     }
