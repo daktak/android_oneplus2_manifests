@@ -7,3 +7,6 @@ clone into local_manifests
 run .repo/local_manifests/redo.sh
 
 for all future runs run .repo/local_manifests/do.sh
+
+
+https://androidfilehost.com/?w=files&flid=91603
