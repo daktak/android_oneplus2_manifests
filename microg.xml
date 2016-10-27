@@ -19,6 +19,4 @@
   <remove-project name="CyanogenMod/android_packages_apps_Nfc" />
   <remove-project name="CyanogenMod/android_packages_apps_TvSettings" />
   <remove-project name="CyanogenMod/android_packages_providers_TvProvider" /> 
-  <!-- <project path="packages/apps/Calendar" name="xsoh/Etar-Calendar" remote="github" revision="master" />
-  -->
 </manifest>
