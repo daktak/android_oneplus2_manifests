@@ -1,0 +1,12 @@
+--- build/target/product/sdk_base.mk	2016-10-24 23:53:34.575202109 +1100
++++ build/target/product/sdk_base.mk.new	2016-10-28 16:16:53.009807332 +1100
+@@ -45,6 +45,9 @@
+ 	sqlite3 \
+ 	SystemUI \
+ 	EasterEgg \
++	OpenWeatherMapProvider \
++	WundergroundWeatherProvider \
++	ahooWeatherProvider \
+ 	WidgetPreview
+ 
+ # Define the host tools and libs that are parts of the SDK.
