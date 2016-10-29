@@ -12,6 +12,6 @@ rm frameworks/base/core/res/res/values/*.orig
 rm device/oneplus/oneplus2/*.orig
 .repo/local_manifests/build.sh
 
-filename=out/target/product/oneplus2/cm-14.0-${startday}-UNOFFICIAL-oneplus2.zip
-mv ${filename} ~/cm-14.0-${startday}-microg-oneplus2.zip
+filename=out/target/product/oneplus2/cm-14.1-${startday}-UNOFFICIAL-oneplus2.zip
+mv ${filename} ~/cm-14.1-${startday}-microg-oneplus2.zip
 
