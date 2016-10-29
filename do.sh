@@ -5,7 +5,6 @@ for n in `grep + .repo/local_manifests/enabled/device.patch | grep -v ++ | grep 
 #curl --create-dirs -L -o .repo/local_manifests/roomservice.xml -O -L https://raw.githubusercontent.com/Seraph08/oneplus2_manifests/master/cm-14.0.xml
 startday=`date +%Y%m%d`
 .repo/local_manifests/stash.sh
-#repo rebase origin/cm-14.1
 repo sync --force-sync
 #repo sync --force-broken --force-sync --no-clone-bundle --quiet
 .repo/local_manifests/patch.sh
