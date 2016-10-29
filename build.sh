@@ -8,5 +8,5 @@ export ANDROID_CCACHE_SIZE="25G"
 export ANDROID_CCACHE_DIR="/pub/aosp/android/.ccache"
 breakfast oneplus2
 croot
-#mka org.cyanogenmod.platform-res -j2
+mka org.cyanogenmod.platform-res -j2
 brunch oneplus2
