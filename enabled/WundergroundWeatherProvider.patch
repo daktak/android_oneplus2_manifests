@@ -20,7 +20,7 @@ diff -uar -N vendor/cmsdk/samples/weatherproviderservice/WundergroundWeatherProv
 +	rm -Rf $(wunder_build)
 +	mkdir -p $(wunder_out)
 +	ln -sf $(wunder_out) $(wunder_build)
-+	cd $(wunder_root)/$(wunder_dir) && ANDROID_DAILY_OVERRIDE="2296837193f8655f3a6c311a6450364c79ff3546" JAVA_TOOL_OPTIONS="$(JAVA_TOOL_OPTIONS) -Dfile.encoding=UTF8" ../gradlew assembleRelease
++	cd $(wunder_root)/$(wunder_dir) && JAVA_TOOL_OPTIONS="$(JAVA_TOOL_OPTIONS) -Dfile.encoding=UTF8" ../gradlew assembleRelease
 +
 +LOCAL_CERTIFICATE := platform
 +LOCAL_SRC_FILES := $(wunder_dir)/$(wunder_apk)
