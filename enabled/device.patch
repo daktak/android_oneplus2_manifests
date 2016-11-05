@@ -1,6 +1,6 @@
---- device/oneplus/oneplus2/device.mk	2016-10-30 00:40:39.845506023 +1100
-+++ device/oneplus/oneplus2/device.mk	2016-10-30 00:42:57.829043021 +1100
-@@ -267,7 +267,19 @@
+--- device/oneplus/oneplus2/device.mk.orig	2016-11-02 10:07:33.287477800 +1100
++++ device/oneplus/oneplus2/device.mk	2016-11-02 10:08:07.717685855 +1100
+@@ -268,7 +268,20 @@
      hostapd \
      libwpa_client \
      wpa_supplicant \
@@ -17,6 +17,7 @@
 +    OpenWeatherMapProvider \
 +    WundergroundWeatherProvider \
 +    YahooWeatherProvider \
++    Calendar \
 +    afhDownloader
  
  PRODUCT_COPY_FILES += \
