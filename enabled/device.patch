@@ -1,6 +1,6 @@
---- device/oneplus/oneplus2/device.mk.orig	2016-11-02 10:07:33.287477800 +1100
-+++ device/oneplus/oneplus2/device.mk	2016-11-02 10:08:07.717685855 +1100
-@@ -268,7 +268,20 @@
+--- device/oneplus/oneplus2/device.mk.orig	2016-11-07 14:39:46.499574021 +1100
++++ device/oneplus/oneplus2/device.mk	2016-11-07 14:40:17.107575446 +1100
+@@ -268,7 +268,19 @@
      hostapd \
      libwpa_client \
      wpa_supplicant \
@@ -9,7 +9,6 @@
 +    F-Droid \
 +    GmsCore \
 +    GsfProxy \
-+    FakeStore \
 +    IchnaeaLnp \
 +    unifiedNlp \
 +    GSMBackend \
