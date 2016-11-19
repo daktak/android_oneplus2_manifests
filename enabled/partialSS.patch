@@ -1,0 +1,11 @@
+--- frameworks/base/packages/SystemUI/src/com/android/systemui/screenshot/TakeScreenshotService.java	2016-10-07 01:02:14.651509226 +1100
++++ frameworks/base/packages/SystemUI/src/com/android/systemui/screenshot/TakeScreenshotService.java.new	2016-11-07 22:45:31.070858545 +1100
+@@ -50,7 +50,7 @@
+ 
+             switch (msg.what) {
+                 case WindowManager.TAKE_SCREENSHOT_FULLSCREEN:
+-                    mScreenshot.takeScreenshot(finisher, msg.arg1 > 0, msg.arg2 > 0);
++                    mScreenshot.takeScreenshotPartial(finisher, msg.arg1 > 0, msg.arg2 > 0);
+                     break;
+                 case WindowManager.TAKE_SCREENSHOT_SELECTED_REGION:
+                     mScreenshot.takeScreenshotPartial(finisher, msg.arg1 > 0, msg.arg2 > 0);

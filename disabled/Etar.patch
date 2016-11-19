@@ -1,6 +1,6 @@
---- packages/apps/Calendar/Android.mk	2016-10-13 22:31:00.219742042 +1100
-+++ packages/apps/Calendar/Android.mk.etar	2016-10-14 10:28:52.677482263 +1100
-@@ -1,50 +1,41 @@
+--- packages/apps/Calendar/Android.mk.orig	2016-10-31 16:58:03.457176765 +1100
++++ packages/apps/Calendar/Android.mk	2016-10-31 17:06:28.755198127 +1100
+@@ -1,50 +1,40 @@
 +# Copyright (c) 2015 μg Project Team
 +#
 +# Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,7 +17,6 @@
 +
  LOCAL_PATH:= $(call my-dir)
  include $(CLEAR_VARS)
-+LOCAL_PRIVILEGED_MODULE := true
  
 -# Include res dir from chips
 -chips_dir := ../../../frameworks/ex/chips/res
@@ -64,21 +63,21 @@
 -LOCAL_AAPT_FLAGS += --extra-packages com.android.timezonepicker
 -
 -include $(BUILD_PACKAGE)
-+etar_root  := $(LOCAL_PATH)
-+etar_out   := $(OUT_DIR)/target/common/obj/APPS/$(LOCAL_MODULE)_intermediates
-+etar_build := $(etar_root)/build
-+etar_apk   := build/outputs/apk/Calendar-release-unsigned.apk
++canedar_root  := $(LOCAL_PATH)
++canedar_out   := $(OUT_DIR)/target/common/obj/APPS/$(LOCAL_MODULE)_intermediates
++canedar_build := $(canedar_root)/build
++canedar_apk   := build/outputs/apk/Calendar-release-unsigned.apk
 +
-+$(etar_root)/$(etar_apk):
-+	rm -Rf $(etar_build)
-+	mkdir -p $(etar_out)
-+	ln -s $(etar_out) $(etar_build)
-+	echo "sdk.dir=$(ANDROID_HOME)" > $(etar_root)/local.properties
-+	cd $(etar_root) && git submodule update --recursive --init
-+	cd $(etar_root) && JAVA_TOOL_OPTIONS="$(JAVA_TOOL_OPTIONS) -Dfile.encoding=UTF8" sh /opt/android-studio/gradle/gradle-2.14.1/bin/gradle assembleRelease
++$(canedar_root)/$(canedar_apk):
++	rm -Rf $(canedar_build)
++	mkdir -p $(canedar_out)
++	ln -s $(canedar_out) $(canedar_build)
++	echo "sdk.dir=$(ANDROID_HOME)" > $(canedar_root)/local.properties
++	cd $(canedar_root) && git submodule update --recursive --init
++	cd $(canedar_root) && gradle dependencies && JAVA_TOOL_OPTIONS="$(JAVA_TOOL_OPTIONS) -Dfile.encoding=UTF8" gradle assembleRelease
 +
 +LOCAL_CERTIFICATE := platform
-+LOCAL_SRC_FILES := $(etar_apk)
++LOCAL_SRC_FILES := $(canedar_apk)
 +LOCAL_MODULE_CLASS := APPS
 +LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
  

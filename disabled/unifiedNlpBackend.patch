@@ -1,7 +1,7 @@
 diff -uNar packages/apps/unifiedNlpBackend/Android.mk packages/apps/unifiedNlpBackend/Android.mk
 --- packages/apps/unifiedNlpBackend/Android.mk	1970-01-01 10:00:00.000000000 +1000
 +++ packages/apps/unifiedNlpBackend/Android.mk	2016-10-24 14:40:24.798051973 +1100
-@@ -0,0 +1,26 @@
+@@ -0,0 +1,25 @@
 +LOCAL_PATH:= $(call my-dir)
 +
 +include $(CLEAR_VARS)
@@ -25,6 +25,5 @@ diff -uNar packages/apps/unifiedNlpBackend/Android.mk packages/apps/unifiedNlpBa
 +LOCAL_SRC_FILES := $(unifiednlp_apk)
 +LOCAL_MODULE_CLASS := APPS
 +LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
-+LOCAL_MODULE_PATH := $(TARGET_OUT_DATA)/app
 +
 +include $(BUILD_PREBUILT)
