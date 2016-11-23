@@ -1,0 +1,11 @@
+--- packages/apps/Calendar/Android.mk	2016-11-23 13:52:25.014187740 +1100
++++ packages/apps/Calendar/Android.mk	2016-11-23 13:53:00.721187740 +1100
+@@ -16,7 +16,7 @@
+ 	ln -s $(calendar_out) $(calendar_build)
+ 	echo "sdk.dir=$(ANDROID_HOME)" > $(calendar_root)/local.properties
+ 	cd $(calendar_root) && git submodule update --recursive --init
+-	cd $(calendar_root) && gradle dependencies && JAVA_TOOL_OPTIONS="$(JAVA_TOOL_OPTIONS) -Dfile.encoding=UTF8" gradle assembleRelease
++	cd $(calendar_root) && cp ../afh_downloader/gradle* . -r && ./gradlew dependencies && JAVA_TOOL_OPTIONS="$(JAVA_TOOL_OPTIONS) -Dfile.encoding=UTF8" ./gradlew assembleRelease
+ 
+ LOCAL_CERTIFICATE := platform
+ LOCAL_SRC_FILES := $(calendar_apk)

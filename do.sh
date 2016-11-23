@@ -8,7 +8,7 @@ for n in `grep + .repo/local_manifests/enabled/device.patch | grep -v ++ | grep 
 startday=`date +%Y%m%d`
 .repo/local_manifests/stash.sh
 repo sync --force-sync
-if [ $? -ne 0]; then
+if [ $? -ne 0 ]; then
   exit 1
 fi
 #repo sync --force-broken --force-sync --no-clone-bundle --quiet
@@ -17,7 +17,7 @@ rm frameworks/base/core/res/res/values/*.orig
 rm device/oneplus/oneplus2/*.orig
 
 .repo/local_manifests/build.sh
-if [ $? -ne 0]; then
+if [ $? -ne 0 ]; then
   exit 1
 fi
 
