@@ -22,4 +22,6 @@ if [ $? -ne 0 ]; then
 fi
 
 filename=out/target/product/oneplus2/cm-14.1-${startday}-UNOFFICIAL-oneplus2.zip
-mv ${filename} cm-14.1-${startday}-microg-oneplus2.zip
+mv ${filename} ~/roms/cm-14.1-${startday}-microg-oneplus2.zip
+MSG=`tail -2 build.log`
+androidpn.py -t "CM 14.1 BUILD" -m "${MSG}"
