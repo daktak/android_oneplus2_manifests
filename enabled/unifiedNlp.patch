@@ -1,0 +1,18 @@
+--- packages/apps/unifiedNlpBackend/build.gradle	2016-12-03 18:57:42.899000000 +1100
++++ packages/apps/unifiedNlpBackend/build.gradle.new	2016-12-04 00:59:04.328339000 +1100
+@@ -19,7 +19,7 @@
+         mavenCentral()
+     }
+     dependencies {
+-        classpath 'com.android.tools.build:gradle:2.2.2'
++        classpath 'com.android.tools.build:gradle:2.1.3'
+     }
+ }
+ 
+@@ -63,4 +63,4 @@
+ 
+ if (file('user.gradle').exists()) {
+     apply from: 'user.gradle'
+-}
+\ No newline at end of file
++}
