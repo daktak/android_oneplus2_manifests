@@ -13,6 +13,6 @@ fi
 croot
 mka org.cyanogenmod.platform-res -j2
 #do custom apps first
-for n in `grep + .repo/local_manifests/enabled/device.patch | grep -v ++ | grep -v PRODUCT | grep -v @@ | grep -v device.mk | grep -v wpa | awk '{print $2}'`; do mka ${n}; done
+#for n in `grep + .repo/local_manifests/enabled/device.patch | grep -v ++ | grep -v PRODUCT | grep -v @@ | grep -v device.mk | grep -v wpa | awk '{print $2}'`; do mka ${n}; done
 
 brunch oneplus2 > build.log
