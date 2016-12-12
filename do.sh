@@ -22,6 +22,9 @@ if [ $? -ne 0 ]; then
 fi
 
 filename=out/target/product/oneplus2/cm-14.1-${startday}-UNOFFICIAL-oneplus2.zip
-mv ${filename} ~/roms/cm-14.1-${startday}-microg-oneplus2.zip
+newfile=~/roms/cm-14.1-${startday}-microg-oneplus2.zip
+mv ${filename} ${newfile}
 MSG=`tail -2 build.log`
 androidpn.py -t "CM 14.1 BUILD" -m "${MSG}"
+pass=`cat .repo/local_manifests/afhpassword`
+.repo/local_manifests/put.ex ${pass} uploads.androidfilehost.com daktak ${newfile}
