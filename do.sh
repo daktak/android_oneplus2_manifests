@@ -27,4 +27,5 @@ mv ${filename} ${newfile}
 MSG=`tail -2 build.log`
 androidpn.py -t "CM 14.1 BUILD" -m "${MSG}"
 pass=`cat .repo/local_manifests/afhpassword`
-.repo/local_manifests/put.ex ${pass} uploads.androidfilehost.com daktak ${newfile}
+#.repo/local_manifests/put.ex ${pass} uploads.androidfilehost.com daktak ${newfile}
+lftp sftp://daktak:${pass}@uploads.androidfilehost.com  -e "put ${newfile}; bye"

@@ -1,0 +1,5 @@
+diff -uNar packages/apps/FDroid/app/gradle.properties packages/apps/FDroid/app/gradle.properties
+--- packages/apps/FDroid/app/gradle.properties	1970-01-01 10:00:00.000000000 +1000
++++ packages/apps/FDroid/app/gradle.properties	2016-12-18 21:25:13.578000000 +1100
+@@ -0,0 +1 @@
++org.gradle.jvmargs=-Xmx1536M

@@ -4,7 +4,7 @@
   <project name="CyanogenMod/android_device_qcom_common" path="device/qcom/common" remote="github" revision="cm-14.1" />
   <project name="TheMuppets/proprietary_vendor_qcom_binaries" path="vendor/qcom/binaries" remote="github" revision="cm-14.1" />
   <project name="TheMuppets/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" revision="cm-14.1" />
-  <project name="Seraph08/android_device_oneplus_oneplus2" path="device/oneplus/oneplus2" remote="github" revision="cm-14.1" />
+  <project name="CyanogenMod/android_device_oneplus_oneplus2" path="device/oneplus/oneplus2" remote="github" revision="cm-14.1" />
   <project name="CyanogenMod/android_kernel_oneplus_msm8994" path="kernel/oneplus/msm8994" remote="github" revision="cm-14.1" />
   <project name="CyanogenMod/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="cm-14.1" />
   <project name="CyanogenMod/android_external_stlport" path="external/stlport" remote="github" revision="cm-14.1" />
