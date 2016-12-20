@@ -21,7 +21,7 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-filename=out/target/product/oneplus2/cm-14.1-${startday}-UNOFFICIAL-oneplus2.zip
+filename=out/target/product/oneplus2/cm-14.1-*-UNOFFICIAL-oneplus2.zip
 newfile=~/roms/cm-14.1-${startday}-microg-oneplus2.zip
 mv ${filename} ${newfile}
 MSG=`tail -2 build.log`
