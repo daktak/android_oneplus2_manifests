@@ -26,8 +26,8 @@ newfile=~/roms/cm-14.1-${startday}-microg-oneplus2.zip
 mv ${filename} ${newfile}
 MSG=`tail -2 build.log`
 androidpn.py -t "CM 14.1 BUILD" -m "${MSG}"
-ftppass=`cat .repo/local_manifest/ftppassword`
+#ftppass=`cat .repo/local_manifest/ftppassword`
 pass=`cat .repo/local_manifests/afhpassword`
 #.repo/local_manifests/put.ex ${pass} uploads.androidfilehost.com daktak ${newfile}
-lftp ftp://daktak:${ftppass}@192.168.1.92:12345 -e "cd roms; put cm-14.1-20161223-microg-oneplus2.zip;  bye"
+#lftp ftp://daktak:${ftppass}@192.168.1.92:12345 -e "cd roms; put cm-14.1-20161223-microg-oneplus2.zip;  bye"
 lftp sftp://daktak:${pass}@uploads.androidfilehost.com  -e "put ${newfile}; bye"
