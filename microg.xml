@@ -14,11 +14,10 @@
   <project path="packages/apps/FDroid" name="fdroid/fdroidclient" remote="gitlab" revision="master" />
   <project path="packages/apps/afh_downloader" name="daktak/afh_downloader" remote="github" revision="master" />
   <!-- cleanup unused -->
-  <remove-project name="CyanogenMod/android_packages_apps_Calendar" />
-  <remove-project name="CyanogenMod/android_packages_apps_TV" />
-  <remove-project name="CyanogenMod/android_packages_apps_Nfc" />
-  <remove-project name="CyanogenMod/android_packages_apps_TvSettings" />
-  <remove-project name="CyanogenMod/android_packages_providers_TvProvider" /> 
+  <remove-project name="LineageOS/android_packages_apps_Calendar" />
+  <remove-project name="LineageOS/android_packages_apps_TV" />
+  <remove-project name="LineageOS/android_packages_apps_TvSettings" />
+  <remove-project name="LineageOS/android_packages_providers_TvProvider" /> 
   <!-- replace -->
   <project path="packages/apps/Calendar" name="xsoh/Etar-Calendar" remote="github" revision="master" />
 </manifest>
