@@ -16,6 +16,7 @@ fi
 rm frameworks/base/core/res/res/values/*.orig
 rm device/oneplus/oneplus2/*.orig
 rm device/oneplus/oneplus3/*.orig
+rm packages/apps/afh_downloader/app/src/main/res/values/*.orig
 
 .repo/local_manifests/build.sh oneplus2
 if [ $? -ne 0 ]; then
@@ -38,6 +39,7 @@ exit 0
 # dev=oneplus3
 # patch -r - -p0 -R < .repo/local_manifests/enabled/afh.patch
 # patch -r - -p0 < .repo/local_manifests/enabled/op3/afh.patch
+# rm packages/apps/afh_downloader/app/src/main/res/values/*.orig
 # .repo/local_manifests/build.sh ${dev}
 # if [ $? -ne 0 ]; then
 #   exit 1
