@@ -22,14 +22,14 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-filename=out/target/product/${dev}/cm-14.1-*-UNOFFICIAL-${dev}.zip
-newfile=~/roms/cm-14.1-${startday}-microg-${dev}.zip
+filename=out/target/product/${dev}/lineage-14.1-*-UNOFFICIAL-${dev}.zip
+newfile=~/roms/lineage-14.1-${startday}-microg-${dev}.zip
 mv ${filename} ${newfile}
 MSG=`tail -2 build.log`
 androidpn.py -t "OP2 CM 14.1 BUILD" -m "${MSG}"
 #ftppass=`cat .repo/local_manifest/ftppassword`
 pass=`cat .repo/local_manifests/afhpassword`
-#lftp ftp://daktak:${ftppass}@192.168.1.92:12345 -e "cd roms; put cm-14.1-20161223-microg-${dev}.zip;  bye"
+#lftp ftp://daktak:${ftppass}@192.168.1.92:12345 -e "cd roms; put lineage-14.1-20161223-microg-${dev}.zip;  bye"
 lftp sftp://daktak:${pass}@uploads.androidfilehost.com  -e "put ${newfile}; bye"
 exit 0
 
@@ -42,8 +42,8 @@ exit 0
 # if [ $? -ne 0 ]; then
 #   exit 1
 # fi
-# newfile=~/roms/cm-14.1-${startday}-microg-${dev}.zip
-# filename=out/target/product/${dev}/cm-14.1-*-UNOFFICIAL-${dev}.zip
+# newfile=~/roms/lineage-14.1-${startday}-microg-${dev}.zip
+# filename=out/target/product/${dev}/lineage-14.1-*-UNOFFICIAL-${dev}.zip
 # mv ${filename} ${newfile}
 # MSG=`tail -2 build.log`
 # androidpn.py -t "OP3 CM 14.1 BUILD" -m "${MSG}"
