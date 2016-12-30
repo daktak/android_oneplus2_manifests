@@ -25,9 +25,11 @@ fi
 
 filename=out/target/product/${dev}/lineage-14.1-*-UNOFFICIAL-${dev}.zip
 newfile=~/roms/lineage-14.1-${startday}-microg-${dev}.zip
+filen="${newfile##*/}"
 mv ${filename} ${newfile}
 MSG=`tail -2 build.log`
-androidpn.py -t "OP2 CM 14.1 BUILD" -m "${MSG}"
+androidpn.py -t "OP2 Linaeage 14.1 BUILD" -m "${filen} \
+${MSG}"
 #ftppass=`cat .repo/local_manifest/ftppassword`
 pass=`cat .repo/local_manifests/afhpassword`
 #lftp ftp://daktak:${ftppass}@192.168.1.92:12345 -e "cd roms; put lineage-14.1-20161223-microg-${dev}.zip;  bye"
@@ -48,7 +50,7 @@ exit 0
 # filename=out/target/product/${dev}/lineage-14.1-*-UNOFFICIAL-${dev}.zip
 # mv ${filename} ${newfile}
 # MSG=`tail -2 build.log`
-# androidpn.py -t "OP3 CM 14.1 BUILD" -m "${MSG}"
+# androidpn.py -t "OP3 14.1 BUILD" -m "${MSG}"
 # lftp sftp://daktak:${pass}@uploads.androidfilehost.com  -e "put ${newfile}; bye"
 # patch -r - -p0 -R < .repo/local_manifests/enabled/op3/afh.patch
 # patch -r - -p0 < .repo/local_manifests/enabled/afh.patch
