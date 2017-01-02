@@ -9,7 +9,7 @@ fi
 if [ $? -ne 0 ]; then
   exit 1
 fi
-for n in `grep + .repo/local_manifests/enabled/device.patch | grep -v ++ | grep -v PRODUCT | grep -v @@ | grep -v device.mk | grep -v wpa | awk '{print $2}'`; do mkdir out/target/common/obj/APPS/${n}_intermediates -p; done
+for n in `grep + .repo/local_manifests/enabled/device.patch | grep -v ++ | grep -v PRODUCT | grep -v @@ | grep -v device-${dev}.mk | grep -v wpa | awk '{print $2}'`; do mkdir out/target/common/obj/APPS/${n}_intermediates -p; done
 startday=`date +%Y%m%d`
 .repo/local_manifests/stash.sh
 repo sync --force-sync -c
