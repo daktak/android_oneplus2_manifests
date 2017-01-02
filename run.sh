@@ -1,21 +1,10 @@
 #!/bin/bash
-.repo/local_manifests/do.sh oneplus2 
+for dev in `cat .repo/local_manifests/device-priority.txt`; do 
+.repo/local_manifests/do.sh ${dev}
 if [ $? -ne 0 ]; then
   exit 1
 fi
-rm -rf out/target/product/oneplus2
-.repo/local_manifests/do.sh oneplus3 no
-if [ $? -ne 0 ]; then
-  exit 1
-fi
-rm -rf out/target/product/oneplus3
-.repo/local_manifests/do.sh onyx no
-if [ $? -ne 0 ]; then
-  exit 1
-fi
-rm -rf out/target/product/onyx
-.repo/local_manifests/do.sh bacon no
-if [ $? -ne 0 ]; then
-  exit 1
-fi
-rm -rf out/target/product/bacon
+rm -rf out/target/product/${dev}
+echo "$(tail -n +2 .repo/local_manifests/device-priority.txt)" > .repo/local_manifests/device-priority.txt
+echo ${dev} >> .repo/local_manifests/device-priority.txt
+done
