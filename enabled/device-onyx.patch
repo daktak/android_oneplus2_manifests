@@ -1,0 +1,24 @@
+--- device/oneplus/oneplus2/device.mk	2016-11-19 11:14:39.092279279 +1100
++++ device/oneplus/oneplus2/device.mk	2016-11-19 11:14:27.917278806 +1100
+@@ -267,7 +267,20 @@
+     hostapd \
+     libwpa_client \
+     wpa_supplicant \
+-    wpa_supplicant.conf
++    wpa_supplicant.conf \
++    F-Droid \
++    GmsCore \
++    GsfProxy \
++    FakeStore \
++    IchnaeaLnp \
++    unifiedNlp \
++    GSMBackend \
++    Nominatem \
++    OpenWeatherMapProvider \
++    WundergroundWeatherProvider \
++    YahooWeatherProvider \
++    Calendar \
++    afhDownloader
+ 
+ PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \

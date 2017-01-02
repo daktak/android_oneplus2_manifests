@@ -1,0 +1,25 @@
+--- device/oneplus/bacon/bacon.mk.orig	2017-01-02 11:57:15.740000000 +1100
++++ device/oneplus/bacon/bacon.mk	2017-01-02 11:57:47.160000000 +1100
+@@ -247,7 +247,21 @@
+     hostapd.deny \
+     wpa_supplicant.conf \
+     wpa_supplicant_overlay.conf \
+-    p2p_supplicant_overlay.conf
++    p2p_supplicant_overlay.conf \
++    F-Droid \
++    GmsCore \
++    GsfProxy \
++    FakeStore \
++    IchnaeaLnp \
++    unifiedNlp \
++    GSMBackend \
++    Nominatem \
++    OpenWeatherMapProvider \
++    WundergroundWeatherProvider \
++    YahooWeatherProvider \
++    Calendar \
++    afhDownloader
++
+ 
+ # Call the proprietary setup
+ $(call inherit-product-if-exists, vendor/oneplus/bacon/bacon-vendor.mk)
