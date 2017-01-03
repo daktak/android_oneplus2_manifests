@@ -1,11 +1,11 @@
---- device/oneplus/oneplus2/device.mk	2016-11-19 11:14:39.092279279 +1100
-+++ device/oneplus/oneplus2/device.mk	2016-11-19 11:14:27.917278806 +1100
-@@ -267,7 +267,20 @@
-     hostapd \
-     libwpa_client \
-     wpa_supplicant \
--    wpa_supplicant.conf
-+    wpa_supplicant.conf \
+--- device/oneplus/onyx/device.mk.orig	2017-01-03 18:05:56.529526260 +1100
++++ device/oneplus/onyx/device.mk	2017-01-03 18:06:59.127526260 +1100
+@@ -227,7 +227,20 @@
+     p2p_supplicant_overlay.conf \
+     hostapd_default.conf \
+     hostapd.accept \
+-    hostapd.deny
++    hostapd.deny \
 +    F-Droid \
 +    GmsCore \
 +    GsfProxy \
@@ -20,5 +20,5 @@
 +    Calendar \
 +    afhDownloader
  
- PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
+ PRODUCT_PACKAGES += \
+     wcnss_service
