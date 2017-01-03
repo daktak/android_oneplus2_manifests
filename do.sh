@@ -5,19 +5,22 @@ if [ -z ${dev} ]; then
 fi
 if [ -z $2 ]; then
   make clobber && make clean
-fi
-if [ $? -ne 0 ]; then
-  exit 1
+  if [ $? -ne 0 ]; then
+    exit 1
+  fi
 fi
 for n in `grep + .repo/local_manifests/enabled/device-${dev}.patch | grep -v ++ | grep -v PRODUCT | grep -v @@ | grep -v device.mk | grep -v wpa | awk '{print $2}'`; do mkdir out/target/common/obj/APPS/${n}_intermediates -p; done
 startday=`date +%Y%m%d`
-.repo/local_manifests/stash.sh
-repo sync --force-sync -c
-if [ $? -ne 0 ]; then
-  exit 1
+if [ -z $2 ]; then
+  .repo/local_manifests/stash.sh
+  repo sync --force-sync -c
+  if [ $? -ne 0 ]; then
+    .repo/local_manifests/patch.sh
+    exit 1
+  fi
+  .repo/local_manifests/patch.sh
 fi
 #repo sync --force-broken --force-sync --no-clone-bundle --quiet
-.repo/local_manifests/patch.sh
 rm frameworks/base/core/res/res/values/*.orig
 rm device/oneplus/${dev}/*.orig
 rm packages/apps/afh_downloader/app/src/main/res/values/*.orig
@@ -39,5 +42,5 @@ ${MSG}"
 #ftppass=`cat .repo/local_manifest/ftppassword`
 pass=`cat .repo/local_manifests/afhpassword`
 #lftp ftp://daktak:${ftppass}@192.168.1.92:12345 -e "cd roms; put lineage-14.1-20161223-microg-${dev}.zip;  bye"
-lftp sftp://daktak:${pass}@uploads.androidfilehost.com  -e "put ${newfile}; bye"
+lftp sftp://daktak:${pass}@uploads.androidfilehost.com  -e "put ${newfile}; bye" && androidpn.py -t "Lineage 14.1 Upload" -m "${filenam}" &
 exit 0

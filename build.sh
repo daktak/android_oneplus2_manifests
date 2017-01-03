@@ -7,7 +7,7 @@ fi
 . build/envsetup.sh
 #export PATH=/home/daktak/.gentoo/java-config-2/current-user-vm/bin:$PATH
 export USE_CCACHE=1
-prebuilts/misc/linux-x86/ccache/ccache -M 25G
+prebuilts/misc/linux-x86/ccache/ccache -M 15G
 export ANDROID_CCACHE_SIZE="15G"
 export ANDROID_CCACHE_DIR="/home/user/android/.ccache"
 breakfast ${dev} 
