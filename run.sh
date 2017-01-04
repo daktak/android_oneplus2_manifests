@@ -1,6 +1,6 @@
 #!/bin/bash
 for dev in `cat .repo/local_manifests/device-priority.txt`; do 
-.repo/local_manifests/do.sh ${dev}
+.repo/local_manifests/do.sh ${dev} $1
 if [ $? -ne 0 ]; then
   exit 1
 fi
