@@ -42,5 +42,5 @@ ${MSG}"
 #ftppass=`cat .repo/local_manifest/ftppassword`
 pass=`cat .repo/local_manifests/afhpassword`
 #lftp ftp://daktak:${ftppass}@192.168.1.92:12345 -e "cd roms; put lineage-14.1-20161223-microg-${dev}.zip;  bye"
-lftp sftp://daktak:${pass}@uploads.androidfilehost.com  -e "put ${newfile}; bye" && androidpn.py -t "Lineage 14.1 Upload" -m "${filenam}" &
+lftp sftp://daktak:${pass}@uploads.androidfilehost.com  -e "put ${newfile}; bye" && androidpn.py -t "Lineage 14.1 Upload" -m "${newfile}" &
 exit 0
