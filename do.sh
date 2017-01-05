@@ -23,8 +23,8 @@ fi
 #repo sync --force-broken --force-sync --no-clone-bundle --quiet
 rm frameworks/base/core/res/res/values/*.orig
 rm device/oneplus/${dev}/*.orig
-rm packages/apps/afh_downloader/app/src/main/res/values/*.orig
 patch -r - -p0 < .repo/local_manifests/enabled/${dev}/afh.patch
+packages/apps/afh_downloader/app/src/main/res/values/
 .repo/local_manifests/build.sh ${dev} 
 if [ $? -ne 0 ]; then
   patch -r - -p0 -R < .repo/local_manifests/enabled/${dev}/afh.patch
