@@ -3,9 +3,12 @@ dev=$1
 if [ -z ${dev} ]; then
   dev=oneplus2
 fi
+. build/envsetup.sh
+breakfast full-eng
 if [ -z $2 ]; then
   make clobber && make clean
   if [ $? -ne 0 ]; then
+	  echo "make clobber & clean failed"
     exit 1
   fi
 fi
@@ -13,9 +16,11 @@ for n in `grep + .repo/local_manifests/enabled/device-${dev}.patch | grep -v ++ 
 startday=`date +%Y%m%d`
 if [ -z $2 ]; then
   .repo/local_manifests/stash.sh
+  repo forall -vc "git reset --hard"
   repo sync --force-sync -c
   if [ $? -ne 0 ]; then
     .repo/local_manifests/patch.sh
+    echo "sync failed"
     exit 1
   fi
   .repo/local_manifests/patch.sh
@@ -29,6 +34,7 @@ rm packages/apps/afh_downloader/app/src/main/res/values/donottranslate.xml.orig
 .repo/local_manifests/build.sh ${dev} 
 if [ $? -ne 0 ]; then
   patch -r - -p0 -R < .repo/local_manifests/enabled/${dev}/afh.patch
+  echo "build failed"
   exit 1
 fi
 patch -r - -p0 -R < .repo/local_manifests/enabled/${dev}/afh.patch
