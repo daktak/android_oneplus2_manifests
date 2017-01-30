@@ -13,7 +13,7 @@
 +    IchnaeaNlpBackend \
 +    unifiedNlp \
 +    GSMBackend \
-+    NominatemNlpBackend \
++    NominatimNlpBackend \
 +    OpenWeatherMapProvider \
 +    WundergroundWeatherProvider \
 +    YahooWeatherProvider \

@@ -10,10 +10,10 @@
 +    GmsCore \
 +    GsfProxy \
 +    FakeStore \
-+    IchnaeaLnp \
++    IchnaeaNlpBackend \
 +    unifiedNlp \
 +    GSMBackend \
-+    Nominatem \
++    NominatimNlpBackend \
 +    OpenWeatherMapProvider \
 +    WundergroundWeatherProvider \
 +    YahooWeatherProvider \
