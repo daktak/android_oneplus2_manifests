@@ -1,5 +1,5 @@
---- device/oneplus/oneplus2/device.mk	2016-11-19 11:14:39.092279279 +1100
-+++ device/oneplus/oneplus2/device.mk	2016-11-19 11:14:27.917278806 +1100
+--- device/oneplus/oneplus2/device.mk	2017-01-30 09:15:57.861809000 +1100
++++ device/oneplus/oneplus2/device.mk	2017-01-30 09:16:21.667809000 +1100
 @@ -267,7 +267,20 @@
      hostapd \
      libwpa_client \
@@ -10,10 +10,10 @@
 +    GmsCore \
 +    GsfProxy \
 +    FakeStore \
-+    IchnaeaLnp \
++    IchnaeaNlpBackend \
 +    unifiedNlp \
 +    GSMBackend \
-+    Nominatem \
++    NominatemNlpBackend \
 +    OpenWeatherMapProvider \
 +    WundergroundWeatherProvider \
 +    YahooWeatherProvider \

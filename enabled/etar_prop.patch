@@ -1,8 +1,0 @@
---- packages/apps/Calendar/gradle/wrapper/gradle-wrapper.properties	2016-12-18 16:21:28.348000000 +1100
-+++ packages/apps/Calendar/gradle/wrapper/gradle-wrapper.properties	2016-12-18 16:21:37.453000000 +1100
-@@ -3,4 +3,4 @@
- distributionPath=wrapper/dists
- zipStoreBase=GRADLE_USER_HOME
- zipStorePath=wrapper/dists
--distributionUrl=https\://services.gradle.org/distributions/gradle-2.10-all.zip
-+distributionUrl=https\://services.gradle.org/distributions/gradle-2.14.1-all.zip
