@@ -7,17 +7,17 @@
   <project path="packages/apps/GfsProxy" name="microg/android_packages_apps_GsfProxy" remote="github" revision="master" /> 
   <!-- location back ends -->
   <project path="packages/apps/LocalGSMBackend" name="n76/Local-GSM-Backend" remote="github" revision="master" />
-  <project path="packages/apps/NominatemBackend" name="microg/NominatimGeocoderBackend" remote="github" revision="master" />
-  <project path="packages/apps/IchnaeaLnpBackend" name="microg/IchnaeaNlpBackend" remote="github" revision="master" />
+  <project path="packages/apps/NominatemNlpBackend" name="microg/NominatimGeocoderBackend" remote="github" revision="master" />
+  <project path="packages/apps/IchnaeaNlpBackend" name="microg/IchnaeaNlpBackend" remote="github" revision="master" />
   <project path="packages/apps/unifiedNlpBackend" name="openbmap/radiocells-nlp-android" remote="github" revision="master" />
   <!-- more -->
   <project path="packages/apps/FDroid" name="fdroid/fdroidclient" remote="gitlab" revision="master" />
   <project path="packages/apps/afh_downloader" name="daktak/afh_downloader" remote="github" revision="master" />
   <!-- cleanup unused -->
-  <remove-project name="LineageOS/android_packages_apps_Calendar" />
+  <!-- <remove-project name="LineageOS/android_packages_apps_Calendar" /> -->
   <remove-project name="LineageOS/android_packages_apps_TV" />
   <remove-project name="LineageOS/android_packages_apps_TvSettings" />
   <remove-project name="LineageOS/android_packages_providers_TvProvider" /> 
-  <!-- replace -->
-  <project path="packages/apps/Calendar" name="xsoh/Etar-Calendar" remote="github" revision="master" />
+  <!-- replace 
+  <project path="packages/apps/Calendar" name="xsoh/Etar-Calendar" remote="github" revision="master" /> -->
 </manifest>
