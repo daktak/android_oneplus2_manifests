@@ -6,6 +6,7 @@ if [ -z ${dev} ]; then
 fi
 . build/envsetup.sh
 #export PATH=/home/daktak/.gentoo/java-config-2/current-user-vm/bin:$PATH
+export WITH_SU=true
 export USE_CCACHE=1
 prebuilts/misc/linux-x86/ccache/ccache -M 20G
 export ANDROID_CCACHE_SIZE="20G"
