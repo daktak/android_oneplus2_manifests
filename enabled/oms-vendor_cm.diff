@@ -1,0 +1,22 @@
+diff --git a/config/common.mk b/config/common.mk
+index feae0ac..28289fc 100644
+--- vendor/cm/config/common.mk
++++ vendor/cm/config/common.mk
+@@ -129,6 +129,7 @@ PRODUCT_PACKAGES += \
+     ExactCalculator \
+     LiveLockScreenService \
+     LockClock \
++    masquerade \
+     Trebuchet \
+     WallpaperPicker \
+     WeatherProvider
+@@ -209,7 +210,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
+ 
+ # Storage manager
+ PRODUCT_PROPERTY_OVERRIDES += \
+-    ro.storage_manager.enabled=true
++    ro.storage_manager.enabled=true \
++    ro.substratum.verified=true
+ 
+ # Telephony
+ PRODUCT_PACKAGES += \
