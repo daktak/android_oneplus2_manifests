@@ -20,4 +20,5 @@
   <remove-project name="LineageOS/android_packages_providers_TvProvider" /> 
   <!-- replace 
   <project path="packages/apps/Calendar" name="xsoh/Etar-Calendar" remote="github" revision="master" /> -->
+  <project path="packages/apps/masquerade" name="TeamSubstratum/masquerade" remote="github" revision="master" />
 </manifest>
