@@ -1,0 +1,12 @@
+--- device/oneplus/oneplus5/device.mk	2017-10-09 16:17:32.488945708 +1100
++++ device/oneplus/oneplus5/device.mk	2017-10-10 15:21:02.519199516 +1100
+@@ -224,7 +224,8 @@
+     libwpa_client \
+     hostapd \
+     wpa_supplicant \
+-    wpa_supplicant.conf
++    wpa_supplicant.conf \
++    GmsCore
+ 
+ PRODUCT_PACKAGES += \
+     libwifi-hal-qcom \
