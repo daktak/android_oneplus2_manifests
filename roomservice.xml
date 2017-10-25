@@ -12,7 +12,7 @@
   <project name="android_vendor_nxp-nfc_opensource_Nfc" path="vendor/nxp-nfc/opensource/Nfc" remote="omnirom" revision="android-8.0" />
   <project name="android_external_ant-wireless_antradio-library" path="external/ant-wireless/antradio-library" remote="omnirom" revision="android-8.0" />
   <project name="android_external_ant-wireless_ant_service" path="external/ant-wireless/ant_service" remote="omnirom" revision="android-8.0" />
-  <project name="android_external_ant-wireless_ant_native" path="external/ant-wireless/ant_native" remote="omnirom" revision="android-7.0" />
+  <project name="android_external_ant-wireless_ant_native" path="external/ant-wireless/ant_native" remote="omnirom" revision="android-8.0" />
   <project name="android_kernel_oneplus_msm8998" path="kernel/oneplus/msm8998" remote="omnirom" revision="android-8.0" />
   <project name="android_external_json-c" path="external/json-c" remote="omnirom" revision="android-8.0" />
   <project name="android_vendor_nxp-nfc_interfaces_opensource_nfc" path="vendor/nxp-nfc/interfaces/opensource/nfc" remote="omnirom" revision="android-8.0" />
