@@ -1,0 +1,23 @@
+--- frameworks/base/core/java/android/hardware/camera2/CameraCharacteristics.java	2017-10-26 15:35:35.896711730 +1100
++++ frameworks/base/core/java/android/hardware/camera2/CameraCharacteristics.java	2017-10-26 15:40:06.480711730 +1100
+@@ -26,6 +26,7 @@
+ 
+ import java.util.Collections;
+ import java.util.List;
++import android.app.ActivityThread;
+ 
+ /**
+  * <p>The properties describing a
+@@ -204,6 +205,12 @@
+      */
+     @Nullable
+     public <T> T get(Key<T> key) {
++        if(key == INFO_SUPPORTED_HARDWARE_LEVEL){
++            String packageName = ActivityThread.currentOpPackageName();
++            if(packageName.equals("com.oneplus.camera")){
++                return (T)new Integer(0x2);
++            }
++        }
+         return mProperties.get(key);
+     }
+ 

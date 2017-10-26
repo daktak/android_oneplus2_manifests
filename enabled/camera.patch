@@ -1,4 +1,4 @@
---- vendor/oneplus/oneplus5/proprietary/etc/camera/camera_config.xml.orig	2017-10-26 15:23:09.083711730 +1100
+--- vendor/oneplus/oneplus5/proprietary/etc/camera/camera_config.xml	2017-10-26 15:23:09.083711730 +1100
 +++ vendor/oneplus/oneplus5/proprietary/etc/camera/camera_config.xml	2017-10-26 15:23:17.268711730 +1100
 @@ -166,7 +166,7 @@
      <EepromName>imx350_gt24c64ass</EepromName>
