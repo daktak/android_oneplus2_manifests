@@ -21,5 +21,4 @@ croot
 #fi
 #do custom apps first
 #for n in `grep + .repo/local_manifests/enabled/device.patch | grep -v ++ | grep -v PRODUCT | grep -v @@ | grep -v device.mk | grep -v wpa | awk '{print $2}'`; do mka ${n}; done
-
 brunch ${dev} > build.log
