@@ -52,14 +52,15 @@ brunch ${dev} > build.log
 #patch -r - -p0 -R < .repo/local_manifests/enabled/${dev}/afh.patch
 
 #filename=out/target/product/${dev}/lineage-14.1-*-UNOFFICIAL-${dev}.zip
-#newfile=~/roms/lineage-14.1-${startday}-microg-${dev}.zip
+filename=/home/user/android/system/out/target/product/${dev}/omni-8.0.0-*-${dev}-HOMEMADE.zip
+newfile=~/roms/omni-8.0.0-${startday}-microg-${dev}-HOMEMADE.zip
 #filen="${newfile##*/}"
-#mv ${filename} ${newfile}
+mv ${filename} ${newfile}
 #MSG=`tail -2 build.log`
 #androidpn.py -t "Linaeage 14.1 BUILD" -m "${filen} \
 #${MSG}"
-#ftppass=`cat .repo/local_manifest/ftppassword`
-#pass=`cat .repo/local_manifests/afhpassword`
-#lftp ftp://daktak:${ftppass}@192.168.1.92:12345 -e "cd roms; put lineage-14.1-20161223-microg-${dev}.zip;  bye"
-#lftp sftp://daktak:${pass}@uploads.androidfilehost.com  -e "put ${newfile}; bye" && androidpn.py -t "Lineage 14.1 Upload" -m "${newfile}" &
+ftppass=`cat .repo/local_manifest/ftppassword`
+pass=`cat .repo/local_manifests/afhpassword`
+#lftp ftp://daktak:${ftppass}@192.168.43:12345 -e "cd roms; put ${newfile};  bye"
+lftp sftp://daktak:${pass}@uploads.androidfilehost.com  -e "put ${newfile}; bye"
 exit 0
