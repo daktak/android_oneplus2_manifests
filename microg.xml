@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project path="packages/apps/GmsCore" name="microg/android_packages_apps_GmsCore" remote="github" revision="master" />
+	<!-- <project path="packages/apps/GmsCore" name="microg/android_packages_apps_GmsCore" remote="github" revision="master" />  -->
+	<project path="prebuilts/prebuiltapks" name="lineageos4microg/android_prebuilts_prebuiltapks" revision="master" remote="github" />
 </manifest>

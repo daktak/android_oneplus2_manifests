@@ -28,13 +28,8 @@ if [ -z $2 ]; then
     echo "sync failed"
     exit 1
   fi
+  .repo/local_manifests/cherry.sh
   .repo/local_manifests/patch.sh
-  cd device/oneplus/oneplus5
-  git fetch https://gerrit.omnirom.org/android_device_oneplus_oneplus5 refs/changes/68/26268/7 && git cherry-pick FETCH_HEAD
-  cd ../../..
-  cd vendor/omni
-  git fetch https://gerrit.omnirom.org/android_vendor_omni refs/changes/08/26208/1 && git cherry-pick FETCH_HEAD
-  cd ../..
 fi
 #repo sync --force-broken --force-sync --no-clone-bundle --quiet
 rm frameworks/base/core/res/res/values/*.orig

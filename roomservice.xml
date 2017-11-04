@@ -18,5 +18,5 @@
   <project name="android_vendor_nxp-nfc_interfaces_opensource_nfc" path="vendor/nxp-nfc/interfaces/opensource/nfc" remote="omnirom" revision="android-8.0" />
   <project name="android_vendor_qcom_opensource_interfaces" path="vendor/qcom/opensource/interfaces" remote="omnirom" revision="android-8.0" />
   <project name="android_vendor_qcom_opensource_bluetooth" path="vendor/qcom/opensource/bluetooth" remote="omnirom" revision="android-8.0" />
-  <project name="android_device_oneplus_oneplus5" path="device/oneplus/oneplus5" remote="omnirom" revision="android-8.0" />
+  <project name="android_device_oneplus_oneplus5" path="device/oneplus/oneplus5" remote="omnirom" revision="android-8.0" /> 
 </manifest>
