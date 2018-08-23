@@ -1,6 +1,6 @@
 <manifest>
     <!--OP5-->
-    <remote name="DB" fetch="https://github.com/Darkobas" />
+    <remote name="DB" fetch="https://github.com/DonkeyCoyote" />
     <!--  <remote name="gr" fetch="https://github.com/GZR-Kernels" /> -->
     <!--<project path="kernel/oneplus/msm8998" name="android_kernel_oneplus_msm8998" remote ="DB" revision="android-7.1" />-->
     <!-- 
@@ -8,9 +8,9 @@
     <project path="kernel/oneplus/msm8998" name="kernel_oneplus_msm8998" remote ="gr" revision="dev" />
     <project path="packages/apps/SnapdragonCameraCAF" name="android_packages_apps_SnapdragonCameraCAF" remote ="DB" revision="test" /> 
 -->
-    <project name="proprietary_vendor_oneplus" path="vendor/oneplus" remote="DB" revision="android-8.0-temp" />
+    <project name="proprietary_vendor_oneplus" path="vendor/oneplus" remote="DB" revision="android-9.0" />
     <remove-project name="android_hardware_interfaces" />
-    <project path="hardware/interfaces" name="android_hardware_interfaces" remote="omnirom" revision="android-8.0" />
+    <project path="hardware/interfaces" name="android_hardware_interfaces" remote="omnirom" revision="android-9.0" />
 
 
 
