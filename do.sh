@@ -1,4 +1,5 @@
 #!/bin/bash
+export LC_ALL=C
 dev=$1
 if [ -z ${dev} ]; then
   dev=oneplus5
