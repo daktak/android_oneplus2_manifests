@@ -1,5 +1,8 @@
 #!/bin/bash
 export LC_ALL=C
+export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx2G"
+./prebuilts/sdk/tools/jack-admin kill-server
+./prebuilts/sdk/tools/jack-admin start-server
 dev=$1
 if [ -z ${dev} ]; then
   dev=oneplus5
